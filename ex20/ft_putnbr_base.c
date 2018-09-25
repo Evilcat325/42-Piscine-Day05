@@ -6,12 +6,17 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:13:32 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 16:23:50 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 16:35:20 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int		ft_base_check(char *str);
-void	ft_putchar(char c);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putnbr_base(int nbr, char *base)
 {
@@ -19,6 +24,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	long	n;
 	long	divisor;
 	int		sign;
+	char	output;
 
 	n = (long)nbr;
 	base_size = ft_base_check(base);
@@ -34,9 +40,10 @@ void	ft_putnbr_base(int nbr, char *base)
 	while (divisor != base_size)
 	{
 		divisor /= base_size;
-		ft_putchar(*(base + (((n / divisor) % divisor) * sign)));
+		output = *(base + (((n / divisor) % base_size) * sign));
+		ft_putchar(output);
 	}
-	ft_putchar(*(base + n % divisor));
+	ft_putchar(*(base + n % base_size));
 }
 
 int		ft_base_check(char *str)
@@ -59,4 +66,9 @@ int		ft_base_check(char *str)
 		str++;
 	}
 	return (len);
+}
+
+int		main(void)
+{
+	ft_putnbr_base(2147483647, "0123456789abcdef");
 }
