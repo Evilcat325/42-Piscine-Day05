@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:13:32 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 15:25:21 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 16:18:44 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	n = (long)nbr;
 	base_size = ft_base_check(base);
 	divisor = base_size;
-	if (base <= 1)
+	if (base_size <= 1)
 		return ;
 	if (n < 0)
 		ft_putchar('-');
