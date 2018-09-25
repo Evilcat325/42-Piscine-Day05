@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/24 13:33:10 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 15:29:51 by seli             ###   ########.fr       */
+/*   Created: 2018/09/24 21:52:08 by seli              #+#    #+#             */
+/*   Updated: 2018/09/24 22:06:57 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strupcase(char *str)
 {
-	write(1, &c, 1);
+	char *head;
+
+	head = str;
+	while (*head)
+	{
+		if ('a' <= *head && *head <= 'z')
+			*head += 'A' - 'a';
+		head++;
+	}
+	return (str);
 }

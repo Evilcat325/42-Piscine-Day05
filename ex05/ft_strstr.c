@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/24 13:33:10 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 15:29:51 by seli             ###   ########.fr       */
+/*   Created: 2018/09/24 19:25:28 by seli              #+#    #+#             */
+/*   Updated: 2018/09/24 21:06:01 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int		ft_is_samestr(char *sub, char *src);
 
-void	ft_putchar(char c)
+char	*ft_strstr(char *str, char *to_find)
 {
-	write(1, &c, 1);
+	int	found;
+
+	if (!to_find || !str || !*to_find || !*str)
+		return (str);
+	while (*to_find)
+	{
+		if (ft_is_samestr(str, to_find))
+			return (to_find);
+		to_find++;
+	}
+	return ((void *)0);
+}
+
+int		ft_is_samestr(char *sub, char *src)
+{
+	while (*sub)
+	{
+		if (*sub != *src)
+			return (0);
+		sub++;
+	}
+	return (1);
 }

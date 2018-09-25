@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/24 13:33:10 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 15:29:51 by seli             ###   ########.fr       */
+/*   Created: 2018/09/24 22:07:08 by seli              #+#    #+#             */
+/*   Updated: 2018/09/24 22:07:39 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strlowcase(char *str)
 {
-	write(1, &c, 1);
+	char *head;
+
+	head = str;
+	while (*head)
+	{
+		if ('A' <= *head && *head <= 'Z')
+			*head -= 'A' - 'a';
+		head++;
+	}
+	return (str);
 }

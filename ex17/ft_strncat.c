@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/24 13:33:10 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 15:29:51 by seli             ###   ########.fr       */
+/*   Created: 2018/09/24 23:47:56 by seli              #+#    #+#             */
+/*   Updated: 2018/09/24 23:49:09 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strncat(char *dest, char *sec, int nb)
 {
-	write(1, &c, 1);
+	char *head;
+
+	head = dest;
+	while (*head)
+		head++;
+	while (*sec && nb > 0)
+	{
+		*head++ = *sec++;
+		nb--;
+	}
+	*head = 0;
+	return (dest);
 }
