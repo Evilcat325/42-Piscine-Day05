@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 19:25:28 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 00:19:15 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 00:20:32 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int		ft_is_samestr(char *sub, char *src)
 {
 	while (*sub)
 	{
-		if (*sub != *src)
+		if (*sub++ != *src++)
 			return (0);
-		sub++;
 	}
 	return (1);
 }
