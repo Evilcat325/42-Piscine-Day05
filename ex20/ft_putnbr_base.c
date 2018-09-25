@@ -6,17 +6,12 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:13:32 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 16:35:20 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 16:36:51 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int		ft_base_check(char *str);
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putnbr_base(int nbr, char *base)
 {
@@ -66,9 +61,4 @@ int		ft_base_check(char *str)
 		str++;
 	}
 	return (len);
-}
-
-int		main(void)
-{
-	ft_putnbr_base(2147483647, "0123456789abcdef");
 }
