@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 00:45:47 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 01:18:29 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 01:18:52 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	}
 	if (!(size == 0 || dstlen > (int)size))
 		*head = 0;
-	return ((unsigned int)(dstlen + ft_strlen(src)));
+	return ((unsigned int)(dstlen + srclen));
 }
 
 int				ft_strlen(char *str)
