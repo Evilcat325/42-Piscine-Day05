@@ -6,9 +6,11 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 00:45:47 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 00:55:41 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 01:09:33 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int				ft_strlen(char *str);
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
