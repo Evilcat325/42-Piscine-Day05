@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 23:19:41 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 23:33:36 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/24 23:58:30 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_printable(char *str)
 {
 	while (*str)
 	{
-		if (!ft_char_is_printable(*str))
+		if (!ft_char_is_printable(str))
 			return (0);
 		str++;
 	}

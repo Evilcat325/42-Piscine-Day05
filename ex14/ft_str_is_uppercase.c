@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 23:18:00 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 23:19:16 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/24 23:58:32 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_uppercase(char *str)
 {
 	while (*str)
 	{
-		if (!ft_char_is_uppercase(*str))
+		if (!ft_char_is_uppercase(str))
 			return (0);
 		str++;
 	}

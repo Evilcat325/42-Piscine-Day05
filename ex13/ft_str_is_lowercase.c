@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 23:15:26 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 23:19:04 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/24 23:58:37 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_lowercase(char *str)
 {
 	while (*str)
 	{
-		if (!ft_char_is_lowercase(*str))
+		if (!ft_char_is_lowercase(str))
 			return (0);
 		str++;
 	}

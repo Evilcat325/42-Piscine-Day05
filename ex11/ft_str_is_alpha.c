@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 23:11:15 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 23:18:58 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/24 23:58:43 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_alpha(char *str)
 {
 	while (*str)
 	{
-		if (!ft_char_is_alpha(*str))
+		if (!ft_char_is_alpha(str))
 			return (0);
 		str++;
 	}
