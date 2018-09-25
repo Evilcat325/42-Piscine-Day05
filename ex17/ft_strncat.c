@@ -6,20 +6,20 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 23:47:56 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 23:49:09 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 00:51:45 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *sec, int nb)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
 	char *head;
 
 	head = dest;
 	while (*head)
 		head++;
-	while (*sec && nb > 0)
+	while (*src && nb > 0)
 	{
-		*head++ = *sec++;
+		*head++ = *src++;
 		nb--;
 	}
 	*head = 0;
