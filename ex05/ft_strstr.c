@@ -6,11 +6,11 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 19:25:28 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 00:20:32 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 00:21:47 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_samestr(char *sub, char *src);
+int		ft_is_samestr(char *src, char *sub);
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -25,7 +25,7 @@ char	*ft_strstr(char *str, char *to_find)
 	return ((void *)0);
 }
 
-int		ft_is_samestr(char *sub, char *src)
+int		ft_is_samestr(char *src, char *sub)
 {
 	while (*sub)
 	{
