@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 19:13:57 by seli              #+#    #+#             */
-/*   Updated: 2018/09/24 19:23:14 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 00:01:19 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	char *head;
 
 	head = dest;
-	while (*src || n > 0)
+	while (*src && n > 0)
 	{
 		*head++ = *src++;
 		n--;
