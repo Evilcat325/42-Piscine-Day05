@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 16:42:59 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 17:42:25 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 19:36:39 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int		ft_base_size(char *base)
 			if (*head == *base)
 				return (0);
 		}
-		if (*head == '+' || *head == '-')
+		if (*base == '+' || *base == '-')
 			return (0);
 		base_size++;
 		base++;
