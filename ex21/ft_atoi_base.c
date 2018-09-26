@@ -6,12 +6,12 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 16:42:59 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 17:08:15 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 17:12:57 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar_base(int nbr, int base_size);
-int		ft_base_check(char *str, char *base);
+int		ft_putnbr_base(int nbr, int base_size);
+int		ft_base_size(char *str, char *base);
 int		ft_atoi(char *str);
 int		ft_isspace(char *str);
 
@@ -27,11 +27,11 @@ int		ft_atoi_base(char *str, char *base)
 		if (*head == '+' || *head == '-')
 			return (0);
 	}
-	base_size = ft_base_check(str, base);
+	base_size = ft_base_size(str, base);
 	if (base_size <= 1)
 		return (0);
 	result = ft_atoi(str);
-	result = ft_putchar_base(result, base_size);
+	result = ft_putnbr_base(result, base_size);
 	return (result);
 }
 
