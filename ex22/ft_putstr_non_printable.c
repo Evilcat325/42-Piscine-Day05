@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 19:13:53 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 19:27:29 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 19:30:10 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_putstr_non_printable(char *str)
 			ft_putchar(*str);
 		else
 			ft_print_hex(*str);
+		str++;
 	}
 }
 
