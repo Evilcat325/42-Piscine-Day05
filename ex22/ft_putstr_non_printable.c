@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 19:13:53 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 19:30:10 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 19:31:21 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	ft_print_hex(char c)
 	ft_putchar('\\');
 	f = (unsigned char)c / 16;
 	s = (unsigned char)c % 16;
-	f += f < 10 ? '0' : 'a';
-	s += s < 10 ? '0' : 'a';
+	f = f < 10 ? f + '0' : f % 10 + 'a';
+	s = s < 10 ? s + '0' : s % 10 + 'a';
 	ft_putchar(f);
 	ft_putchar(s);
 }
