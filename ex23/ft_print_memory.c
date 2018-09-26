@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 20:24:31 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 22:56:29 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 23:06:29 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	ft_print_addres(unsigned long total)
 	unsigned long	divisor;
 	char			c;
 
-	divisor = 16 * 16 * 16 * 16 * 16 * 16 * 16;
+	divisor = 16 * 16 * 16 * 16 * 16 * 16;
 	while (divisor != 1)
 	{
 		c = (total / divisor) % 16;
