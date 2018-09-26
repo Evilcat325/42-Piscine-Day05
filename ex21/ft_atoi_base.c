@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 16:42:59 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 17:12:57 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/25 17:18:14 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,9 @@ int		ft_base_size(char *str, char *base)
 	while (*str)
 	{
 		head = base;
-		not_in_base = 0;
+		not_in_base = 1;
 		while (*head)
-			not_in_base = *head++ == *str ? 1 : not_in_base;
+			not_in_base = *head++ == *str ? 0 : not_in_base;
 		if (not_in_base && *str != '+' && *str != '-')
 			return (0);
 		head = str;
