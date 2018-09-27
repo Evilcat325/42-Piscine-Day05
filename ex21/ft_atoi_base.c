@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 16:42:59 by seli              #+#    #+#             */
-/*   Updated: 2018/09/25 19:36:39 by seli             ###   ########.fr       */
+/*   Updated: 2018/09/27 14:45:49 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,19 @@ int		ft_atoi(char *str, char *base, int base_size)
 		str++;
 	if (*str == '+' || *str == '-')
 		sign = *str++ == '-' ? -1 : 1;
-	while (ft_in_base(str, base) >= 0)
+	while (*str)
 	{
+		if (*str == '+' || *str == '-')
+			return (result);
+		if (ft_in_base(str, base) < 0)
+			return (0);
 		prev_result = result;
 		result = result * base_size + ft_in_base(str, base) * sign;
 		if (result / base_size != prev_result)
 			return (sign == 1 ? -1 : 0);
 		str++;
 	}
-	return ((int)result);
+	return (result);
 }
 
 int		ft_in_base(char *str, char *base)
